@@ -182,7 +182,6 @@ class _AuthenticationPageState extends State<Authentication> {
         Navigator.of(context).pushReplacementNamed('/home');
       } else {
         setState(() {
-          
           _authMode = AuthMode.Login;
         });
       }
@@ -194,7 +193,8 @@ class _AuthenticationPageState extends State<Authentication> {
             title: Text('An Error Occured'),
             content: Text(successInformation['message']),
             actions: [
-              FlatButton(
+              TextButton(
+                  key: Key('dialog'),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -265,7 +265,7 @@ class _AuthenticationPageState extends State<Authentication> {
                     SizedBox(
                       height: 10.0,
                     ),
-                    FlatButton(
+                    TextButton(
                       key: Key('authenticate'),
                       onPressed: () {
                         setState(() {
@@ -286,14 +286,15 @@ class _AuthenticationPageState extends State<Authentication> {
                       height: 10.0,
                     ),
                     Container(
-                        child: RaisedButton(
-                      color: Colors.black,
-                      textColor: Colors.white,
-                      child: _authMode == AuthMode.SignUp
-                          ? Text('Register')
-                          : Text('LOGIN'),
-                      onPressed: () => _submitForm()
-                    )),
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.black,
+                            ),
+                            key: Key('registerbtn'),
+                            child: _authMode == AuthMode.SignUp
+                                ? Text('Register')
+                                : Text('LOGIN'),
+                            onPressed: () => _submitForm())),
                   ],
                 ),
               ),

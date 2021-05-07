@@ -23,8 +23,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
- 
-
   @override
   Widget build(BuildContext context) {
     double sizeee = 120.0;
@@ -59,7 +57,7 @@ class _MyAppState extends State<MyApp> {
       ),
       routes: {
         '/home': (BuildContext context) => Home(),
-        '/Auth':(BuildContext context) =>Authentication()
+        '/Auth': (BuildContext context) => Authentication()
       },
     );
   }
