@@ -12,15 +12,13 @@ void main(){
 group('App Testing', (){
 IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-testWidgets("full app test", (tester) async {
+testWidgets("app login test", (tester) async {
       
   app.main();
   tester.pumpAndSettle();
 
 final emailField = find.byKey(Key('emailfield'));
     final passwordField = find.byKey(Key("passwordfield"));
-    final registerbtn = find.byKey(Key('authenticate'));
-    final cnfrmpassField = find.byKey(Key('cnfrmPass'));
     final accpttrms = find.byKey(Key('acceptterms'));
     final signInButton = find.byKey(Key('registerbtn'));
     final homepage = find.byType(Home);
@@ -40,10 +38,13 @@ await tester.pumpAndSettle();
 await tester.tap(accpttrms);
 await tester.tap(signInButton);
 await tester.pumpAndSettle();
+await tester.pumpWidget(Home());
 
 
 
 
-    });
-  });
+    
+  }
+  );
+});
 }
