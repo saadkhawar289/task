@@ -10,7 +10,7 @@ import 'Pages/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  Firebase.initializeApp(); 
   runApp(MyApp());
 }
 

@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
 Widget _buildDrawer(BuildContext context) {
   return Drawer(
     child: Column(
-      children: <Widget>[
+      children: <Widget>[ 
         AppBar(
           backgroundColor: Color(0xff36332e),
           automaticallyImplyLeading: false,

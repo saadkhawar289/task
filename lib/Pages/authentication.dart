@@ -263,7 +263,7 @@ class _AuthenticationPageState extends State<Authentication> {
                     ),
                     _buildAcceptSwitch(),
                     SizedBox(
-                      height: 10.0,
+                      height: 10.0, 
                     ),
                     TextButton(
                       key: Key('authenticate'),

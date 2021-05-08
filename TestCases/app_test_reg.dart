@@ -38,7 +38,7 @@ await tester.enterText(cnfrmpassField, '123456');
 await tester.pumpAndSettle();
 await tester.tap(accpttrms);
 await tester.tap(signInButton);
-await tester.pumpAndSettle();
+await tester.pumpAndSettle(); 
 await tester.pumpWidget(Authentication());
 await tester.pumpAndSettle(Duration(seconds: 2));
 await tester.tap(emailField);

@@ -21,10 +21,7 @@ final emailField = find.byKey(Key('emailfield'));
     final passwordField = find.byKey(Key("passwordfield"));
     final accpttrms = find.byKey(Key('acceptterms'));
     final signInButton = find.byKey(Key('registerbtn'));
-    final homepage = find.byType(Home);
-     final alertdilog = find.byType(AlertDialog);
-     final okayDilog = find.byKey(Key('dialog'));
-    final authPage = find.byType(Authentication);
+    
 
 
 
