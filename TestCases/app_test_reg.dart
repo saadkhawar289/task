@@ -41,16 +41,7 @@ await tester.tap(signInButton);
 await tester.pumpAndSettle(); 
 await tester.pumpWidget(Authentication());
 await tester.pumpAndSettle(Duration(seconds: 2));
-await tester.tap(emailField);
-await tester.enterText(emailField, 'ss@ss.com');
-await tester.pumpAndSettle();     
-await tester.tap(passwordField);
-await tester.enterText(passwordField, '123456');  
-await tester.pumpAndSettle();
-await tester.tap(accpttrms);
-await tester.tap(signInButton);
-await tester.pumpAndSettle();
-await tester.pumpWidget(Home());
+
 
 
     
